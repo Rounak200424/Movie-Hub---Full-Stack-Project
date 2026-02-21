@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./review.css">
+</head>
+<body>
+    <nav>
+    <div class="logo">🎬MovieHub🎬</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="mainpg.html">Home</a>
+      <a href="discover.html">Discover</a>
+      <a href="review.html">My Reviews</a>
+    </div>
+      <div class="right">
+<div class="login">
+  <button class="login-btn" id="login-btn" onclick="loginbtn()">Login</button>
+</div>
+      </div>
+      <div class="profile" onclick="clickProfile()">
+
+      </div>
+      <div class="dropdown" id="dropdown-menu">
+<a href="#">My Profile</a>
+<a href="#">Settings</a>
+<a href="#">Logout</a>
+      </div>
+  </nav>
+  <div class="reviews-page">
+  
+
+
+  <div class="tabs">
+    <button class="tab active" id="myReviewsBtn" onclick="showMyReviews()">My Reviews</button>
+    <button class="tab" id="allReviewsBtn">All Reviews</button>
+  </div>
+
+  <div id="review-container" style="color: white;"></div>
+  <div id="all-review-section"  >
+  <div class="search-box">
+    <input type="text" id="searchMovieInput" placeholder="Enter movie name...">
+    <button class="searchMovieBtn" id="searchMovieBtn">Search</button>
+  </div>
+  <div id="allReviewsResult"></div>
+  </div>
+<script src="project2.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .reviews-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  background: #eee;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.tab.active,
+.tab:hover {
+  background: #333;
+  color: #fff;
+}
+
+.reviews-section {
+  margin-bottom: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.reviews-list {
+  list-style: none;
+  padding: 0;
+}
+
+.review-card {
+  background: #f7f7f7;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+  </style>
+</head>
+<body>
+  <div class="reviews-page">
+  <h1 class="page-title">Movie Reviews</h1>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" id="myReviewsBtn">My Reviews</button>
+    <button class="tab" id="allReviewsBtn">All Reviews</button>
+  </div>
+
+  <!-- My Reviews -->
+  <div id="myReviews" class="reviews-section">
+    <h2>My Reviews</h2>
+    <ul class="reviews-list">
+      <li class="review-card">🎬 Inception (⭐5) - "Amazing visuals and concept!"</li>
+      <li class="review-card">🎬 Interstellar (⭐4) - "Emotional and thought-provoking."</li>
+    </ul>
+  </div>
+
+  <!-- All Reviews -->
+  <div id="allReviews" class="reviews-section hidden">
+    <h2>All Reviews</h2>
+    <ul class="reviews-list">
+      <li class="review-card">🎬 Joker (⭐5) - "Joaquin Phoenix was brilliant." - by Alex</li>
+      <li class="review-card">🎬 Avatar (⭐3) - "Good effects, weak story." - by Sara</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

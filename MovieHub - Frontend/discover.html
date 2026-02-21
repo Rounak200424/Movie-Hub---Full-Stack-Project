@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover - MovieHub</title>
+  <link rel="stylesheet" href="./discover.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav>
+    <div class="logo">🎬MovieHub🎬</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="mainpg.html">Home</a>
+      <a href="discover.html">Discover</a>
+      <a href="review.html">My Reviews</a>
+    </div>
+      <div class="right">
+<div class="login">
+  <button class="login-btn" id="login-btn" onclick="loginbtn()">Login</button>
+</div>
+      </div>
+      <div class="profile" onclick="clickProfile()">
+
+      </div>
+      <div class="dropdown" id="dropdown-menu">
+<a href="#">My Profile</a>
+<a href="#">Settings</a>
+<a href="#">Logout</a>
+      </div>
+  </nav>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
+    <h1>Explore & Discover</h1>
+    <p>Find your next favorite film by genre, language or year.</p>
+  </section>
+
+  <!-- ================= DISCOVER SECTION ================= -->
+  <div class="container">
+
+    
+
+    <!-- Filters -->
+    <div class="filters">
+      <select id="yearSelect">
+        <option value="">All Years</option>
+        <option>2025</option>
+        <option>2024</option>
+        <option>2023</option>
+        <option>2022</option>
+        <option>2021</option>
+      </select>
+
+      <select id="languageSelect">
+        <option value="">All Languages</option>
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="ta">Tamil</option>
+        <option value="te">Telugu</option>
+        <option>Kannada</option>
+      </select>
+
+      <select id="genreSelect">
+  <option value="">Select Genre</option>
+  <option value="28">Action</option>
+  <option value="35">Comedy</option>
+  <option value="18">Drama</option>
+  <option value="27">Horror</option>
+  <option value="10749">Romance</option>
+  <option value="878">Sci-Fi</option>
+</select>
+    </div>
+
+    <!-- Genre Buttons -->
+    <div class="search-btn">
+    <button id="searchBtn">Search</button>
+  </div>
+    <!-- Results -->
+    <div class="movie-results" id="movie-results">
+      <!-- JS Generated Movies Will Appear Here -->
+    </div>
+
+  </div>
+
+<!--User click movie card and pop model appear-->
+<div class="model" id="popup-model">
+<div class="model-content">
+<button class="close-btn" onclick="closeModal()">×</button>
+<h3 id="model-title">Movie Title </h3>
+<p style="font-size: 0.8em;">Likes💜:<span id="like-count">0</span></p>
+<button class="like-btn" id="like-Btn">Like</button>
+<textarea id="review-text" placeholder="Write Your Review..."></textarea>
+<button class="submit-btn" id="submit-review" onclick="submitReview()" >Submit</button>
+</div>
+  </div>
+  <script src="discover.js"></script>
+</body>
+</html>

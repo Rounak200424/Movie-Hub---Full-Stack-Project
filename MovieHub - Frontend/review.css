@@ -1,0 +1,220 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+     background-color: #2c2c3e;
+    }
+
+    nav {
+      background-color:rgb(203, 202, 202);
+      color: white;
+      padding: 10px 50px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 1.5em;
+      font-weight: bolder;
+      flex: 1;
+      color: red;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      flex: 2;
+    }
+
+    .nav-links a {
+      color: #333333;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: red;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+    .right{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+    }
+    .login-btn{
+      margin-right: 19px;
+      cursor: pointer;
+padding: 8px 20px;
+border-radius: 4px;
+border-color: purple;
+margin-top: 5px;
+color: black;
+font-weight: bolder;
+      background-color: transparent;
+    }
+    .login-btn:hover{
+      background-color: purple;
+    }
+    .profile{
+      background-image: url('https://cdn-icons-png.flaticon.com/512/149/149071.png');
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+       width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+    .dropdown{
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #2c2c3e;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      overflow: hidden;
+   display: none;
+      flex-direction: column;
+      min-width: 150px;
+      z-index: 100;
+    }
+    .dropdown a{
+      padding: 10px 15px;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      border-bottom: 1px solid #3c3c50;
+    }
+    .reviews-page{
+      margin-top: 50px;
+    }
+    .page-title{
+      color: red;
+      font-family: Georgia, 'Times New Roman', Times, serif ;
+      display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .tabs{
+    
+      display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .tab {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  background: #eee;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+.search-box{
+  display: flex;
+      justify-content: center;
+     
+      margin-top: 25px;
+}
+.search-box input{
+  width: 50%;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+}
+.searchMovieBtn{
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  background: #eee;
+  border-radius: 6px;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px auto;
+  width: 80%;
+}
+
+.review-card h3 {
+  margin: 0;
+  color: wheat;
+}
+.review-card p{
+  margin-top: 3px;
+  color: whitesmoke;
+}
+.delete-btn{
+  width: 60px;
+  height: 20px;
+  margin-top: 4px;
+  border-radius: 4px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+.edit-btn{
+  width: 60px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Main Page</title>
+  <link rel="stylesheet" href="mainpg.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">🎬MovieHub🎬</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="mainpg.html">Home</a>
+      <a href="discover.html">Discover</a>
+      <a href="review.html">My Reviews</a>
+    </div>
+      <div class="right">
+<div class="login">
+  <button class="login-btn" id="login-btn" onclick="loginbtn()">Login</button>
+</div>
+      </div>
+      <div class="profile" onclick="clickProfile()">
+
+      </div>
+      <div class="dropdown" id="dropdown-menu">
+<a href="#" onclick="signUpBtn()">Sign Up</a>
+<a href="#">Settings</a>
+<a href="#" onclick="logout()">Logout</a>
+      </div>
+  </nav>
+  
+  <div class="middle">
+    <h1 class="Welcome">🎬Welcome🎬</h1>
+    <div class="middle-txt">
+<h3> Discover new movies, share your thoughts, and see what others are saying</h3>
+    </div>
+    <div class="srch">
+<div class="search-box" >
+    <input type="text" id="search-input" placeholder="Search here..." name="search" required>
+    <button type="submit" onclick="searchMovie()" >🔍︎</button>
+    </div>
+    </div>
+  </div>
+  <div class="recent">
+<h1 class="Recent-txt">Recently Released Movies</h1>
+<div class="movie-grid" id="recent-container">
+
+</div>
+  </div>
+  <div class="result">
+<h2 class="search-txt">Search Result</h2>
+<div class="movie-grid" id="search-Container">
+
+</div>
+  </div>
+  
+  <div class="model" id="popup-model">
+<div class="model-content">
+<button class="close-btn" onclick="closeModal()">×</button>
+<h3 id="model-title">Movie Title </h3>
+<p style="font-size: 0.8em;">Likes💜:<span id="like-count">0</span></p>
+<button class="like-btn" id="like-Btn">Like</button>
+<textarea id="review-text" placeholder="Write Your Review..."></textarea>
+<button class="submit-btn" id="submit-review" onclick="submitReview()" >Submit</button>
+</div>
+  </div>
+  
+  <div class="login-modal" id="login-modal">
+  <div class="login-content">
+    <button class="closebtn" id="close-btn" onclick="closeModel()">×</button>
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="email" id="email" placeholder="Enter Email" required>
+<input type="password" id="password" placeholder="Enter Password" required>
+    <button class="user-login" onclick="submitLogin()">Login</button>
+    <br>
+
+<a href="#" onclick="forgotPassword()">Forget Password?</a>
+
+
+    <hr>
+    <button class="google-btn" onclick="googleLogin()">Connect with Google</button>
+  </div>
+
+</div>
+
+<div class="login-modal" id="signup-modal">
+  <div class="login-content">
+    <button class="closebtn" id="close-btn" onclick="signUpClose()">×</button>
+    <h2>Sign Up</h2>
+    <input type="text" id="s-username" placeholder="Enter Username">
+    <input type="email" id="s-email" placeholder="Enter Email" required>
+<input type="password" id="s-password" placeholder="Enter Password" required>
+    <button class="user-login" onclick="submitSignup()">Sign Up</button>
+    <br>
+    <hr>
+    <button class="google-btn" onclick="googleLogin()">Connect with Google</button>
+  </div>
+
+</div>
+
+
+
+
+  
+
+
+<script src="mainpg.js"></script>
+<script src="project2.js"></script>
+
+</body>
+</html>
